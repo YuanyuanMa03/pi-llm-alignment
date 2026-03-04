@@ -160,6 +160,20 @@ model, tokenizer = load_model("path/to/your/model")
 # Or use HuggingFace: load_model("Qwen/Qwen2.5-3B-Instruct")
 ```
 
+### Model Hosting
+
+Large model weights are hosted on Hugging Face Hub (or ModelScope) due to GitHub's file size limits.
+
+To upload your local model to Hugging Face:
+
+1.  Get your Access Token from [Hugging Face Settings](https://huggingface.co/settings/tokens).
+2.  Run the upload script:
+
+```bash
+# Example
+python scripts/upload_to_hf.py --model-path models/Qwen/Qwen3___5-2B --repo-id YuanyuanMa03/pi-llm-alignment-model --token YOUR_HF_TOKEN
+```
+
 ---
 
 ## Experimental Setup
