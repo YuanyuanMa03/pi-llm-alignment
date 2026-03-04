@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.env
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Large Model Files (Keep structure but ignore weights)
+models/**/*.bin
+models/**/*.safetensors
+models/**/*.pt
+models/**/*.pth
+models/**/*.gguf
+models/**/*.h5
+# Alternatively ignore entire model dirs if downloaded
+# models/Qwen/
+
+# Logs and Data
+logs/
+results/
+data/

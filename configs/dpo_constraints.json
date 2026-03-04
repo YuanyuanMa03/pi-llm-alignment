@@ -1,0 +1,40 @@
+{
+  "constraints": [
+    {
+      "type": "NumericalBoundsConstraint",
+      "params": {
+        "bounds": {
+          "age": [0, 120],
+          "weight": [0, 200],
+          "height": [0, 250],
+          "temperature": [35, 42]
+        },
+        "weight": 1.0,
+        "enabled": true
+      }
+    },
+    {
+      "type": "TemporalOrderConstraint",
+      "params": {
+        "stages": ["seedling", "tillering", "heading", "maturity"],
+        "weight": 1.0,
+        "enabled": true,
+        "case_sensitive": false,
+        "whole_word_match": true
+      }
+    },
+    {
+      "type": "KeywordPresenceConstraint",
+      "params": {
+        "required_keywords": ["age", "value"],
+        "weight": 0.5,
+        "enabled": true
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "description": "DPO训练约束配置",
+    "created_for": "PI-LLM Alignment Variant B"
+  }
+}
