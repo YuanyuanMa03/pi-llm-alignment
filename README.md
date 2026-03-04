@@ -162,16 +162,16 @@ model, tokenizer = load_model("path/to/your/model")
 
 ### Model Hosting
 
-Large model weights are hosted on Hugging Face Hub (or ModelScope) due to GitHub's file size limits.
+The model weights are available on Hugging Face Hub: **[myy555/pi-llm-alignment-model](https://huggingface.co/myy555/pi-llm-alignment-model)**
 
-To upload your local model to Hugging Face:
+To download the model:
 
-1.  Get your Access Token from [Hugging Face Settings](https://huggingface.co/settings/tokens).
-2.  Run the upload script:
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
-```bash
-# Example
-python scripts/upload_to_hf.py --model-path models/Qwen/Qwen3___5-2B --repo-id YuanyuanMa03/pi-llm-alignment-model --token YOUR_HF_TOKEN
+model_id = "myy555/pi-llm-alignment-model"
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForCausalLM.from_pretrained(model_id)
 ```
 
 ---
